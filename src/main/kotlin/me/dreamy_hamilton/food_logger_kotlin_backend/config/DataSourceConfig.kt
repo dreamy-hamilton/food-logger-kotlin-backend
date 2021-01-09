@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration
 class DataSourceConfig {
     @Bean
     fun dataSourceAfterFlyway(dataSource: DataSource): DataSourceHolder {
+        println(System.getenv("SPRING_DATABASE_URL") + "\n username: " +
+            System.getenv("SPRING_DATABASE_USERNAME") + "\n password: " +
+            System.getenv("SPRING_DATABASE_PASSWORD"))
         val flyway = Flyway.configure().dataSource(
             System.getenv("SPRING_DATABASE_URL"),
             System.getenv("SPRING_DATABASE_USERNAME"),
