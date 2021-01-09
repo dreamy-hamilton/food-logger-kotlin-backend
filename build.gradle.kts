@@ -32,6 +32,9 @@ dependencies {
     // FLYWAY
     implementation("org.flywaydb:flyway-core")
 
+    // POSTGRES FOR HEROKU
+    implementation("org.postgresql:postgresql:42.2.18")
+
     // TEST
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
