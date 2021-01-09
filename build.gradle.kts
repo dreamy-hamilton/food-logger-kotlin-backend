@@ -47,3 +47,8 @@ tasks.test {
 tasks.withType<KotlinCompile>() {
     kotlinOptions.jvmTarget = "12"
 }
+
+// Heroku
+tasks.register("stage") {
+    dependsOn("build")
+}
