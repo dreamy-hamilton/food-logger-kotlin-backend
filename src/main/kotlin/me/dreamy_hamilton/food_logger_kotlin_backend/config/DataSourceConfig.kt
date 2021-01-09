@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration
 class DataSourceConfig {
     @Bean
     fun dataSourceAfterFlyway(dataSource: DataSource): DataSourceHolder {
+        println(System.getenv("SPRING_DATASOURCE_URL"))
         val flyway = Flyway.configure().dataSource(
             System.getenv("SPRING_DATASOURCE_URL"),
             System.getenv("SPRING_DATASOURCE_USERNAME"),

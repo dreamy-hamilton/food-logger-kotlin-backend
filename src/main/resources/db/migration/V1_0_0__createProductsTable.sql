@@ -1,5 +1,5 @@
 CREATE TABLE dbproducts (
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     product_id int NOT NULL,
     name VARCHAR NOT NULL
 )
